@@ -19,13 +19,20 @@ mgrep()
 #   http://stackoverflow.com/questions/1853946/getting-the-last-argument-passed-to-a-shell-script
 }
 
+# -a: include . files
+# -h: use unit suffixes
+# -l: long format
+# -t: most recently modified first
 # -G: colorized output
-alias ll='ls -alGh'
+alias ll='ls -ahltG'
 
+# -i: request confirmation
 alias rm='rm -i'
+
+# -C: always colorize
 alias tree='tree -C'
 
-# Colorize less output
+# -R: colorize
 alias less='less -R'
 
 # Print timestamp in history [https://askubuntu.com/a/391087]
@@ -33,7 +40,6 @@ HISTTIMEFORMAT="%F %T "
 
 # Starship
 eval "$(starship init bash)"
-
 # https://starship.rs/faq/#why-don-t-i-see-a-glyph-symbol-in-my-prompt
 export LC_ALL="en_US.UTF-8"
 
@@ -41,6 +47,9 @@ export LC_ALL="en_US.UTF-8"
 alias jq='jq -C'
 
 SCRIPT_PATH=$(dirname $(realpath ${BASH_SOURCE}))
-alias cdsettings='cd $SCRIPT_PATH'
+alias cdsettings='cd ${SCRIPT_PATH}'
 
 alias tf='terraform'
+
+# TODO: Add automatically opening the web link
+alias gitpush='git push origin `git branch --show-current`'
