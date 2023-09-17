@@ -19,6 +19,9 @@ mgrep()
 #   http://stackoverflow.com/questions/1853946/getting-the-last-argument-passed-to-a-shell-script
 }
 
+# -G: colorized output
+alias ll='ls -alGh'
+
 alias rm='rm -i'
 alias tree='tree -C'
 

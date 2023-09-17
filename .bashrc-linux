@@ -2,6 +2,3 @@
 SCRIPT_PATH=$(dirname $(realpath ${BASH_SOURCE}))
 
 . $SCRIPT_PATH/bashrc-common
-
-# -G: colorized output
-alias ll='ls -alGh'
