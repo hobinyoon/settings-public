@@ -1,0 +1,43 @@
+# Multi-line grep allowing one or more white spaces between words
+mgrep()
+{
+	PATTERN=""
+	for ((i=1; i<=$#; i++)); do
+		#printf "[%s]\n" ${!i}
+		if [ "$i" -ne "1" ]; then
+			PATTERN+="(\s)+"
+		fi
+		PATTERN+=${!i}
+	done
+	#printf "[%s]\n" $PATTERN
+
+	pcregrep --color -niM "$PATTERN" *
+
+# Getting n-th argument:
+#   http://stackoverflow.com/questions/1497811/how-to-get-the-nth-positional-argument-in-bash
+# Getting the last argument:
+#   http://stackoverflow.com/questions/1853946/getting-the-last-argument-passed-to-a-shell-script
+}
+
+alias rm='rm -i'
+alias tree='tree -C'
+
+# Colorize less output
+alias less='less -R'
+
+# Print timestamp in history [https://askubuntu.com/a/391087]
+HISTTIMEFORMAT="%F %T "
+
+# Starship
+eval "$(starship init bash)"
+
+# https://starship.rs/faq/#why-don-t-i-see-a-glyph-symbol-in-my-prompt
+export LC_ALL="en_US.UTF-8"
+
+# Colorize jq output even when it's outputting to pipe
+alias jq='jq -C'
+
+SCRIPT_PATH=$(dirname $(realpath ${BASH_SOURCE}))
+alias cdsettings='cd $SCRIPT_PATH'
+
+alias tf='terraform'
