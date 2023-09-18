@@ -43,8 +43,10 @@ alias jq='jq -C'
 SCRIPT_PATH=$(dirname $(realpath ${BASH_SOURCE}))
 alias cdsettings='cd ${SCRIPT_PATH}'
 
-alias tf='terraform'
-
 alias cdrepos='cd ~/repos'
 
+alias tf='terraform'
+
+# Push to origin, create a PR using the first commit, and open the link in the
+# web browser.
 alias gitpush='git push origin `git branch --show-current` && gh pr create -f -w'
