@@ -22,9 +22,8 @@ mgrep()
 # -a: include . files
 # -h: use unit suffixes
 # -l: long format
-# -t: most recently modified first
 # -G: colorized output
-alias ll='ls -ahltG'
+alias ll='ls -ahlG'
 
 # -i: request confirmation
 alias rm='rm -i'
