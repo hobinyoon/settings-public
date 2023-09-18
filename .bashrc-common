@@ -45,5 +45,6 @@ alias cdsettings='cd ${SCRIPT_PATH}'
 
 alias tf='terraform'
 
-# TODO: Add automatically opening the web link
-alias gitpush='git push origin `git branch --show-current`'
+alias cdrepos='cd ~/repos'
+
+alias gitpush='git push origin `git branch --show-current` && gh pr create -f -w'
