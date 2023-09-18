@@ -38,11 +38,6 @@ alias less='less -R'
 # Print timestamp in history [https://askubuntu.com/a/391087]
 HISTTIMEFORMAT="%F %T "
 
-# Starship
-eval "$(starship init bash)"
-# https://starship.rs/faq/#why-don-t-i-see-a-glyph-symbol-in-my-prompt
-export LC_ALL="en_US.UTF-8"
-
 # Colorize jq output even when it's outputting to pipe
 alias jq='jq -C'
 
