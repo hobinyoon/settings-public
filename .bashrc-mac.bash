@@ -1,8 +1,3 @@
-# We get the real path of the file being sourced in SCRIPT_PATH even when the file is a symbolic link [https://askubuntu.com/a/1066549]
-SCRIPT_PATH=$(dirname $(realpath ${BASH_SOURCE}))
-
-. $SCRIPT_PATH/.bashrc-common
-
 # fzf: a command line fuzz finder (https://github.com/junegunn/fzf)
 #   Automatically installed by something. Let's leave it for now.
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
