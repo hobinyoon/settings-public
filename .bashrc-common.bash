@@ -46,7 +46,7 @@ alias cdsettings='cd ${SCRIPT_PATH}'
 alias cdrepos='cd ~/repos'
 
 alias tf='terraform'
-alias tfplan='terraform plan -refresh-only'
+# alias tfplan='terraform plan -refresh-only'
 
 # Push to origin, create a PR using the first commit, and open the link in the
 # web browser.
