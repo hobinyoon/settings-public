@@ -10,3 +10,7 @@ export PATH=$PATH:/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/
 
 # Terraform autocomplete [https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli]
 complete -C /opt/homebrew/bin/terraform terraform
+
+# Push to origin, create a PR using the first commit, and open the link in the
+# web browser.
+alias gitpush='git push origin `git branch --show-current` && gh pr create -f -w'
