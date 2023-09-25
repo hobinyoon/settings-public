@@ -47,3 +47,5 @@ alias cdrepos='cd ~/repos'
 
 alias tf='terraform'
 # alias tfplan='terraform plan -refresh-only'
+
+alias gitlog='git log -n 3'
