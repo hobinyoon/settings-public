@@ -48,4 +48,7 @@ alias cdrepos='cd ~/repos'
 alias tf='terraform'
 # alias tfplan='terraform plan -refresh-only'
 
+# git
 alias gitlog='git log -n 3'
+# Delete all branches except main and the checked out one
+alias git-delete-all-branches='git branch | grep -v "main" | grep -v "^*" | xargs git branch -D'
