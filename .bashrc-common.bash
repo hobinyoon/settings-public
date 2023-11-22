@@ -49,6 +49,6 @@ alias tf='terraform'
 # alias tfplan='terraform plan -refresh-only'
 
 # git
-alias gitlog='git log -n 3'
+alias gitlog='git log -n 1 -p'
 # Delete all branches except main and the checked out one
 alias git-delete-all-branches='git branch | grep -v "main" | grep -v "^*" | xargs git branch -D'
