@@ -97,8 +97,8 @@ syntax enable
 
 " Note: When some colors are too dark, you can adjust them in the Mac Terminal
 " --> Settings --> Profiles --> ANSI colors.
-" colorscheme industry
-colorscheme default
+colorscheme elflord
+" I think I like elflord, koehler, torte. They are easy to read.  And maybe ron.
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
