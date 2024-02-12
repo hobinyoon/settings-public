@@ -1,3 +1,6 @@
+# Homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # fzf: a command line fuzz finder (https://github.com/junegunn/fzf)
 #   Automatically installed by something. Let's leave it for now.
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
