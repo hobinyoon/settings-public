@@ -17,3 +17,7 @@ complete -C /opt/homebrew/bin/terraform terraform
 # Push to origin, create a PR using the first commit, and open the link in the
 # web browser.
 alias gitpush='git push origin `git branch --show-current` && gh pr create -f -w'
+
+# Full path of the directory
+# [https://superuser.com/questions/202212/how-can-i-display-the-absolute-path-in-bash-prompt]
+PS1='\h:\w \u\$ '
