@@ -1,5 +1,5 @@
 [alias]
-	st = status
+  st = status
 [user]
-	name = Your Name
-	email = hobinyoon@gmail.com
+  name = Hobin Yoon
+  email = hobinyoon@gmail.com
