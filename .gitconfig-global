@@ -1,5 +1,10 @@
 [alias]
   st = status
+  dt = difftool
 [user]
   name = Hobin Yoon
   email = hobinyoon@gmail.com
+[diff]
+  tool = vimdiff
+[difftool]
+  prompt = false
