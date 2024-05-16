@@ -40,8 +40,8 @@ HISTTIMEFORMAT="%F %T "
 # Colorize jq output even when it's outputting to pipe
 alias jq='jq -C'
 
-SCRIPT_PATH=$(dirname $(realpath ${BASH_SOURCE}))
-alias cdsettings='cd ${SCRIPT_PATH}'
+HOBIN_SETTINGS_PUBLIC_PATH=$(dirname $(realpath ${BASH_SOURCE}))
+alias cdsettings='cd ${HOBIN_SETTINGS_PUBLIC_PATH}'
 
 alias cdrepos='cd ~/repos'
 
