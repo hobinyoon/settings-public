@@ -21,3 +21,7 @@ alias gitpush='git push origin `git branch --show-current` && gh pr create -f -w
 # Full path of the directory
 # [https://superuser.com/questions/202212/how-can-i-display-the-absolute-path-in-bash-prompt]
 PS1='\h:\w \u\$ '
+
+# https://github.com/mitranim/gow
+export GOPATH="$HOME/go"
+export PATH="$GOPATH/bin:$PATH"
