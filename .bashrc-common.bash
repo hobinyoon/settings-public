@@ -50,10 +50,13 @@ alias tf='terraform'
 
 # git
 alias gitlog='git log -n 1 -p'
+
 # Delete all branches except main and the checked out one
-# TODO: Revisit this. This is dangerous. I think it accidentally deleted the
+# Warning: Revisit this. This is dangerous. I think it accidentally deleted the
 # remote dev branch.
 # alias git-delete-all-branches='git branch | grep -v "main" | grep -v "^*" | xargs git branch -D'
 
 # Show changes in the current branch only
 alias gitlogbranch='git log main..'
+
+alias gsm='git switch main'

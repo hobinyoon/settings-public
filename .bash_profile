@@ -23,3 +23,6 @@ if [ -f '/Users/hobin/Downloads/google-cloud-sdk/path.bash.inc' ]; then . '/User
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/hobin/Downloads/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/hobin/Downloads/google-cloud-sdk/completion.bash.inc'; fi
+
+# https://developer.hashicorp.com/terraform/tutorials/gcp-get-started/install-cli
+complete -C /opt/homebrew/bin/terraform terraform
