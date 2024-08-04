@@ -1,5 +1,5 @@
 Setup:
   ln -sf ~/repos/hobinyoon/settings-public/.bash_profile ~/.bash_profile
-  ln -sf ~/repos/hobinyoon/settings-public/.bashrc ~/.bashrc
+  ln -sf ~/repos/hobinyoon/settings-public/.bashrc.bash ~/.bashrc
   ln -sf ~/repos/hobinyoon/settings-public/.vimrc ~/.vimrc
   ln -sf ~/repos/hobinyoon/settings-public/.gitconfig-global ~/.gitconfig
