@@ -1,4 +1,4 @@
-# Homebrew
+# Export env variables for Homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # fzf: a command line fuzz finder (https://github.com/junegunn/fzf)
