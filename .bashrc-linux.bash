@@ -1,1 +1,1 @@
-export PATH=$PATH:$HOME/go/bin
+export PS1='\u@\h:\w$ '

@@ -43,7 +43,7 @@ alias jq='jq -C'
 HOBIN_SETTINGS_PUBLIC_PATH=$(dirname $(realpath ${BASH_SOURCE}))
 alias cdsettings='cd ${HOBIN_SETTINGS_PUBLIC_PATH}'
 
-alias cdrepos='cd ~/repos'
+alias cdcode='cd ~/code'
 
 alias tf='terraform'
 # alias tfplan='terraform plan -refresh-only'
