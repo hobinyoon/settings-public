@@ -25,3 +25,6 @@ PS1='\h:\w \u\$ '
 # https://github.com/mitranim/gow
 export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin:$PATH"
+
+# https://developer.hashicorp.com/terraform/tutorials/gcp-get-started/install-cli
+complete -C /opt/homebrew/bin/terraform terraform
