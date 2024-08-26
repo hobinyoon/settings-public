@@ -28,3 +28,10 @@ export PATH="$GOPATH/bin:$PATH"
 
 # https://developer.hashicorp.com/terraform/tutorials/gcp-get-started/install-cli
 complete -C /opt/homebrew/bin/terraform terraform
+
+# -a: include . files
+# -h: use unit suffixes
+# -l: long format
+# -G: colorized output
+alias ll='ls -ahlG'
+

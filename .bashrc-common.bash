@@ -19,12 +19,6 @@ mgrep()
 #   http://stackoverflow.com/questions/1853946/getting-the-last-argument-passed-to-a-shell-script
 }
 
-# -a: include . files
-# -h: use unit suffixes
-# -l: long format
-# -G: colorized output
-alias ll='ls -ahlG'
-
 # -i: request confirmation
 alias rm='rm -i'
 
