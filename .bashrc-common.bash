@@ -43,7 +43,8 @@ alias tf='terraform'
 # alias tfplan='terraform plan -refresh-only'
 
 # git
-alias gitlog='git log -n 1 -p'
+# alias gitlog='git log -n 1 -p'
+alias gitlog='git log --graph'
 
 # Delete all branches except main and the checked out one
 # Warning: Revisit this. This is dangerous. I think it accidentally deleted the
