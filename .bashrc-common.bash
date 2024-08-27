@@ -54,3 +54,5 @@ alias gitlog='git log -n 1 -p'
 alias gitlogbranch='git log main..'
 
 alias gsm='git switch main'
+
+alias alert='while [ 1 ]; do echo -n -e "\a."; sleep 1; done'
