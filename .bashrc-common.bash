@@ -44,10 +44,9 @@ alias tf='terraform'
 
 # git
 # alias gitlog='git log -n 1 -p'
-alias gitlog='git log --graph'
-
+# alias gitlog='git log --graph'
 # https://stackoverflow.com/questions/1441010/the-shortest-possible-output-from-git-log-containing-author-and-date
-# git log --pretty=format:"%h%x09%an%x09%ad%x09%s"
+alias gitlog='git log --pretty=format:"%h%x09%an%x09%ad%x09%s"'
 
 # Delete all branches except main and the checked out one
 # Warning: Revisit this. This is dangerous. I think it accidentally deleted the
