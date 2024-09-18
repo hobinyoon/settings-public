@@ -56,6 +56,6 @@ alias gitlog='git log --pretty=format:"%h%x09%an%x09%ad%x09%s"'
 # Show changes in the current branch only
 alias gitlogbranch='git log main..'
 
-alias gsm='git switch main'
+alias gsm='git switch master'
 
 alias alert='while [ 1 ]; do echo -n -e "\a."; sleep 1; done'
