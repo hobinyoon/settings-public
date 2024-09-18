@@ -53,9 +53,7 @@ alias gitlog='git log --pretty=format:"%h%x09%an%x09%ad%x09%s"'
 # remote dev branch.
 # alias git-delete-all-branches='git branch | grep -v "main" | grep -v "^*" | xargs git branch -D'
 
-# Show changes in the current branch only
-alias gitlogbranch='git log main..'
-
 alias gsm='git switch master'
+alias gb='git branch'
 
 alias alert='while [ 1 ]; do echo -n -e "\a."; sleep 1; done'
