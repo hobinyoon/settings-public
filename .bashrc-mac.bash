@@ -35,3 +35,5 @@ complete -C /opt/homebrew/bin/terraform terraform
 # -G: colorized output
 alias ll='ls -ahlG'
 
+# https://stackoverflow.com/questions/68829860/how-to-install-clangd-on-mac-preferably-with-homebrew
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"

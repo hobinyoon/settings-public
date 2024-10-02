@@ -55,5 +55,6 @@ alias gitlog='git log --pretty=format:"%h%x09%an%x09%ad%x09%s"'
 
 alias gsm='git switch master'
 alias gb='git branch'
+alias gr='git fetch origin master && git rebase origin/master'
 
 alias alert='while [ 1 ]; do echo -n -e "\a."; sleep 1; done'
