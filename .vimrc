@@ -198,3 +198,6 @@ au BufRead,BufNewFile ~/* call SetExpandTab2()
 
 " No swap file: https://vi.stackexchange.com/questions/177
 set noswapfile
+
+" https://stackoverflow.com/questions/2288756/how-to-set-working-current-directory-in-vim
+set autochdir

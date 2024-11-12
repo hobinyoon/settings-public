@@ -57,4 +57,6 @@ alias gsm='git switch master'
 alias gb='git branch'
 alias gr='git fetch origin master && git rebase origin/master'
 
+alias gitstash='git stash --include-untracked --keep-index'
+
 alias alert='while [ 1 ]; do echo -n -e "\a."; sleep 1; done'
