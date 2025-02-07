@@ -25,8 +25,9 @@ alias rm='rm -i'
 # -C: always colorize
 alias tree='tree -C'
 
+# -N: line numbers
 # -R: colorize
-alias less='less -R'
+alias less='less -NR'
 
 # Print timestamp in history [https://askubuntu.com/a/391087]
 HISTTIMEFORMAT="%F %T "
