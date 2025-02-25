@@ -8,7 +8,7 @@ ln -sf ~/code/hobinyoon/settings-public/.vimrc ~/.vimrc
 ln -sf ~/code/hobinyoon/settings-public/.gitconfig-global ~/.gitconfig
 
 # Fix the file ownership because sometimes they are overwritten by git or htop
-sudo chown -R `whoami`:`id -gn` ~/.config
+sudo chown -R `whoami`:`id -gn` ~/.config || true
 
 # Install vim-fugitive
 #   https://github.com/tpope/vim-fugitive
