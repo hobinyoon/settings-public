@@ -63,3 +63,6 @@ alias gitstash='git stash --include-untracked --keep-index'
 alias alert='while [ 1 ]; do echo -n -e "\a."; sleep 1; done'
 
 alias grep='grep --color'
+
+# Starship
+eval "$(starship init bash)"
