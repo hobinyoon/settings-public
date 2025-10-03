@@ -51,10 +51,10 @@ alias tf='terraform'
 #
 # %h commit hash
 # %ad date
-# %s subject
 # %an name
 # %ae email
-alias gitlog='git log --pretty=format:"%h %ad %s | %an <%ae>" --date=short | grep -v "auto-commit] integrate with" | head -n 20'
+# %s subject
+alias gitlog='git log --pretty=format:"%h %ad %an <%ae> | %s" --date=short | grep -v "auto-commit] integrate with" | head -n 15'
 
 # Delete all branches except main and the checked out one
 # Warning: Revisit this. This is dangerous. I think it accidentally deleted the
