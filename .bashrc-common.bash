@@ -1,17 +1,17 @@
 # Multi-line grep allowing one or more white spaces between words
 mgrep()
 {
-	PATTERN=""
-	for ((i=1; i<=$#; i++)); do
-		#printf "[%s]\n" ${!i}
-		if [ "$i" -ne "1" ]; then
-			PATTERN+="(\s)+"
-		fi
-		PATTERN+=${!i}
-	done
-	#printf "[%s]\n" $PATTERN
+  PATTERN=""
+  for ((i=1; i<=$#; i++)); do
+    #printf "[%s]\n" ${!i}
+    if [ "$i" -ne "1" ]; then
+      PATTERN+="(\s)+"
+    fi
+    PATTERN+=${!i}
+  done
+  #printf "[%s]\n" $PATTERN
 
-	pcregrep --color -niM "$PATTERN" *
+  pcregrep --color -niM "$PATTERN" *
 
 # Getting n-th argument:
 #   http://stackoverflow.com/questions/1497811/how-to-get-the-nth-positional-argument-in-bash
@@ -56,8 +56,31 @@ alias tf='terraform'
 # %s subject
 
 gitlog() {
-	local branch_name="${1:-}"
-	git log --pretty=format:"%h %ad %an %ae %s" --date=short $branch_name | grep -v "auto-commit] integrate with" | head -n 15
+  local branch_name="${1:-}"
+  git log --pretty=format:"%h %ad %an %ae %s" --date=short $branch_name | grep -v "auto-commit] integrate with" | head -n 15
+}
+
+gitpull() {
+  for i in {1..10}; do
+    echo "git pull: Attempt ${i}"
+    git pull
+    if [[ "$?" -eq 0 ]]; then
+      echo "git pull: Attempt ${i} succeeded."
+      break
+    fi
+    echo "git pull: Attempt ${i} failed."
+  done
+
+  for i in {1..10}; do
+    echo "git submodule update: Attempt ${i}"
+    git submodule update
+    if [[ "$?" -eq 0 ]]; then
+      echo "git submodule update: Attempt ${i} succeeded."
+      break
+    fi
+
+    echo "git submodule update: Attempt ${i} failed."
+  done
 }
 
 
