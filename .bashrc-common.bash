@@ -61,7 +61,7 @@ alias grep='grep --color'
 
 gitlog() {
   local branch_name="${1:-}"
-  git log --pretty=format:"%h %ad %an %ae %s" --date=short $branch_name | grep -v "auto-commit] integrate with" | head -n 15
+  git log --pretty=format:"%h %ad %an %ae %s" --date=format:"%Y-%m-%d %H:%M" $branch_name | grep -v "auto-commit] integrate with" | head -n 15
 }
 
 gitpull() {
