@@ -43,6 +43,10 @@ alias cdcode='cd ~/code'
 alias tf='terraform'
 # alias tfplan='terraform plan -refresh-only'
 
+alias alert='while [ 1 ]; do echo -n -e "\a."; sleep 1; done'
+
+alias grep='grep --color'
+
 # git
 # alias gitlog='git log -n 1 -p'
 # alias gitlog='git log --graph'
@@ -92,12 +96,6 @@ gitpull() {
 alias gsm='git switch master'
 alias gb='git branch'
 alias gr='git fetch origin master && git rebase origin/master'
-
-alias gitstash='git stash --include-untracked --keep-index'
-
-alias alert='while [ 1 ]; do echo -n -e "\a."; sleep 1; done'
-
-alias grep='grep --color'
 
 # Starship
 eval "$(starship init bash)"
