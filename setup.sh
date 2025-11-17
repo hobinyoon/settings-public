@@ -2,12 +2,18 @@
 
 set -e
 
+mkdir -p ~/.ssh
+chmod 700 ~/.ssh
+
+# Installs Starship
+curl -sS https://starship.rs/install.sh | sh
+
 ln -sf ~/code/hobinyoon/settings-public/.bash_profile ~/.bash_profile
 
 ln -sf ~/code/hobinyoon/settings-public/.vimrc ~/.vimrc
 ln -sf ~/code/hobinyoon/settings-public/.gitconfig-global ~/.gitconfig
 
-# Install vim-fugitive
+# Installs vim-fugitive
 #   https://github.com/tpope/vim-fugitive
 mkdir -p ~/.vim/pack/tpope/start
 cd ~/.vim/pack/tpope/start
