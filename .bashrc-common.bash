@@ -64,7 +64,7 @@ gitlog() {
   git log --pretty=format:"%h %ad %an %ae %s" --date=format:"%Y-%m-%d %H:%M" $branch_name | grep -v "auto-commit] integrate with" | head -n 15
 }
 
-gitpull() {
+gitpull_() {
   for i in {1..10}; do
     echo "git pull: Attempt ${i}"
     git pull
@@ -85,6 +85,10 @@ gitpull() {
 
     echo "git submodule update: Attempt ${i} failed."
   done
+}
+
+gitpull() {
+  time gitpull_; alert
 }
 
 
