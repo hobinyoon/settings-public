@@ -99,7 +99,8 @@ gitpull() {
 
 alias gsm='git switch master'
 alias gb='git branch'
-alias gr='git fetch origin master && git rebase origin/master'
+# alias gr='git fetch origin master && git rebase origin/master'
+alias gitstash='git stash --include-untracked --keep-index'
 
 # Starship
 eval "$(starship init bash)"
