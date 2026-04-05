@@ -22,8 +22,11 @@ mgrep()
 # -i: request confirmation
 alias rm='rm -i'
 
-# -C: always colorize
-alias tree='tree -C'
+# -a: All files are printed
+# -C: Always colorize
+# -D: Print last modification date.
+# -h: Print size in a human readable way.
+alias tree='tree -aDCh'
 
 # -N: line numbers
 # -R: colorize
