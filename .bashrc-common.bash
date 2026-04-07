@@ -67,31 +67,29 @@ gitlog() {
   git log --pretty=format:"%h %ad %an %ae %s" --date=format:"%Y-%m-%d %H:%M" $branch_name | grep -v "auto-commit] integrate with" | head -n 15
 }
 
+# gitpull_: Internal helper to retry git operations.
+# Retries 'git pull' and 'git submodule update' up to 10 times each
+# with a 1s delay on failure to handle transient network issues.
 gitpull_() {
-  for i in {1..10}; do
-    echo "git pull: Attempt ${i}"
-    git pull
-    if [[ "$?" -eq 0 ]]; then
-      echo "git pull: Attempt ${i} succeeded."
-      break
-    fi
-    echo "git pull: Attempt ${i} failed."
-  done
+	for i in {1..10}; do
+		echo "git pull: Attempt ${i}"
+		git pull && { echo "git pull: Attempt ${i} succeeded."; break; }
+		echo "git pull: Attempt ${i} failed."
+	done
 
-  for i in {1..10}; do
-    echo "git submodule update: Attempt ${i}"
-    git submodule update
-    if [[ "$?" -eq 0 ]]; then
-      echo "git submodule update: Attempt ${i} succeeded."
-      break
-    fi
-
-    echo "git submodule update: Attempt ${i} failed."
-  done
+	for i in {1..10}; do
+		echo "git submodule update: Attempt ${i}"
+		git submodule update && { echo "git submodule update: Attempt ${i} succeeded."; break; }
+		echo "git submodule update: Attempt ${i} failed."
+	done
 }
 
+# gitpull: Main entry point for repo updates.
+# Executes the update logic in a subshell to ensure CTRL+C
+# terminates the process without closing the current terminal.
+# Triggers a system alert upon successful completion.
 gitpull() {
-  time gitpull_; alert
+  ( time gitpull_ && alert )
 }
 
 
