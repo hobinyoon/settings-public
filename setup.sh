@@ -6,7 +6,7 @@ mkdir -p ~/.ssh
 chmod 700 ~/.ssh
 
 # Installs Starship
-curl -sS https://starship.rs/install.sh | sh
+curl -sS https://starship.rs/install.sh | sh -s -- -y
 
 ln -sf ~/code/hobinyoon/settings-public/.bash_profile ~/.bash_profile
 
