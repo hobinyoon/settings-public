@@ -7,6 +7,6 @@ bind-key -T copy-mode-vi Enter send-keys -X copy-pipe-and-cancel "pbcopy"
 bind-key -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel "pbcopy"
 
 # Increase the scrollback buffer. Default is 2000
-set-option -g history-limit 100000
+set -g history-limit 100000
 # Fix the "Osc52" Truncation
 set -s set-clipboard on
