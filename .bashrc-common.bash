@@ -63,8 +63,7 @@ alias grep='grep --color'
 # %s subject
 
 gitlog() {
-  local branch_name="${1:-}"
-  git log --pretty=format:"%h %ad %an %ae %s" --date=format:"%Y-%m-%d %H:%M" --grep="auto-commit] integrate with" --invert-grep -n 10 $branch_name
+  git log --pretty=format:"%h %ad %an %ae %s" --date=format:"%Y-%m-%d %H:%M" --grep="auto-commit] integrate with" --invert-grep -n 10 "$@"
 }
 
 # gitpull_: Internal helper to retry git operations.
