@@ -10,3 +10,8 @@ bind-key -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel "pb
 set -g history-limit 100000
 # Fix the "Osc52" Truncation
 set -s set-clipboard on
+
+# Shift + Left/Right to move current window left or right
+bind-key -n S-Left swap-window -d -t -1
+bind-key -n S-Right swap-window -d -t +1
+

@@ -98,7 +98,9 @@ gitpull() {
 # alias git-delete-all-branches='git branch | grep -v "main" | grep -v "^*" | xargs git branch -D'
 
 alias gsm='git switch master'
-alias gb='git branch'
+
+alias gb='git -c color.ui=always for-each-ref --sort=-committerdate refs/heads/ --format="%(HEAD) %(align:45)%(color:yellow)%(refname:short)%(color:reset)%(end) %(color:green)%(committerdate:iso)%(color:reset)  %(color:blue)(%(committerdate:relative))%(color:reset)  - %(subject)"'
+
 # alias gr='git fetch origin master && git rebase origin/master'
 alias gitstash='git stash --include-untracked --keep-index'
 
