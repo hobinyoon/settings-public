@@ -12,6 +12,7 @@ ln -sf ~/code/hobinyoon/settings-public/.bash_profile ~/.bash_profile
 
 ln -sf ~/code/hobinyoon/settings-public/.vimrc ~/.vimrc
 ln -sf ~/code/hobinyoon/settings-public/.gitconfig-global ~/.gitconfig
+ln -sf ~/code/hobinyoon/settings-public/.tmux.conf-linux ~/.tmux.conf
 
 # Installs vim-fugitive
 #   https://github.com/tpope/vim-fugitive

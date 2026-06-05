@@ -15,3 +15,11 @@ set -s set-clipboard on
 bind-key -n S-Left swap-window -d -t -1
 bind-key -n S-Right swap-window -d -t +1
 
+# fix up SSH agent forwarding
+set -g update-environment "DISPLAY SSH_ASKPASS SSH_AGENT_PID SSH_AUTH_SOCK_SET SSH_CONNECTION WINDOWID XAUTHORITY"
+setenv -g SSH_AUTH_SOCK $HOME/.ssh/ssh_auth_sock
+
+# Fix htop coloring
+# https://unix.stackexchange.com/questions/1045/getting-256-colors-to-work-in-tmux
+set -g default-terminal "screen-256color"
+
