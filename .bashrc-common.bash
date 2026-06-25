@@ -91,6 +91,7 @@ gitpull() {
   ( time gitpull_ && alert )
 }
 
+alias gitshow='git show --pretty=fuller'
 
 # Delete all branches except main and the checked out one
 # Warning: Revisit this. This is dangerous. I think it accidentally deleted the
